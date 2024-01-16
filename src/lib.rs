@@ -13,6 +13,8 @@
 //!
 //! * `quick-js`: Enable by default. Use [quick-js](https://crates.io/crates/quick-js)
 //!    as the JS backend.
+//! * `rquickjs`: Use [rquickjs](https://crates.io/crates/rquickjs) as the JS backend.
+//!    You need to disable the default features to enable this backend.
 //! * `duktape`: Use [duktape](https://crates.io/crates/ducc) as the JS backend.
 //!    You need to disable the default features to enable this backend.
 //! * `wasm-js`: Use [wasm-bindgen](https://crates.io/crates/wasm-bindgen) and

@@ -59,6 +59,16 @@ cfg_if! {
                 compile_error!("quick-js backend is not support in the current build target.");
             }
         }
+    } else if #[cfg(feature = "rquickjs")] {
+        cfg_if! {
+            if #[cfg(any(unix, all(windows, target_env = "gnu")))] {
+                mod rquickjs;
+
+                pub(crate) type Engine = self::rquickjs::Engine;
+            } else {
+                compile_error!("rquickjs backend is not support in the current build target.");
+            }
+        }
     } else if #[cfg(feature = "duktape")] {
         cfg_if! {
             if #[cfg(any(unix, windows))] {
