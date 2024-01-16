@@ -94,7 +94,7 @@ fn test_throw_on_error() {
             _ => unreachable!(),
         },
     };
-    assert!(err_msg.contains("ParseError"));
+    assert!(err_msg.contains("parse error"));
 }
 
 #[test]
